@@ -4,3 +4,10 @@
 # Address blocks in CIDR notation
 127.0.0.0/8
 ::1/128
+
+# YODA whitelist
+193.191.177.12
+2001:6a8:2880:a021::12
+
+# Own IP whitelist
+192.168.86.1
