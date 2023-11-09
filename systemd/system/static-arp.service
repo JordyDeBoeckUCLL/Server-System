@@ -1,0 +1,10 @@
+[Unit]
+Description=Set Static ARP Entry for Default Gateway
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/arp -s 193.191.176.254 ca:fe:c0:ff:ee:00
+
+[Install]
+WantedBy=multi-user.target
