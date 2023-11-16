@@ -1,0 +1,13 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+zone "jordy-deboeck.sasm.uclllabs.be" {
+        type master;
+        file "/etc/bind/zones/db.jordy-deboeck.sasm.uclllabs.be";
+        allow-transfer { 193.191.176.39; 193.191.176.254; 193.191.177.4; 193.191.176.104 };
+};
