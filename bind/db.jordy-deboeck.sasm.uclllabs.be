@@ -17,12 +17,10 @@ $ORIGIN jordy-deboeck.sasm.uclllabs.be.
         IN      NS      ns2.uclllabs.be.
 
 ;A records
-@       IN      A       193.191.177.221
-www     IN      A       193.191.177.221
-mail    IN      A       193.191.177.221
-ns      IN      A       193.191.177.221
+@       IN      A       193.191.176.39
+www     IN      A       193.191.176.39
+ns      IN      A       193.191.176.39
 ns1     IN      A       193.191.176.254
 ns2     IN      A       193.191.177.4
 test    IN      A       193.191.177.254
-www1    IN      A       193.191.177.221
-www2    IN      A       193.191.177.221
+
