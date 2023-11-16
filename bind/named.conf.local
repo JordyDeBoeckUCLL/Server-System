@@ -11,3 +11,9 @@ zone "jordy-deboeck.sasm.uclllabs.be" {
         file "/etc/bind/zones/db.jordy-deboeck.sasm.uclllabs.be";
         allow-transfer { 193.191.176.39; 193.191.176.254; 193.191.177.4; 193.191.176.104; };
 };
+
+zone "lucas-oudevrielink.sasm.uclllabs.be" {
+        type slave;
+        file "/var/cache/slaves/db.lucas-oudevrielink.sasm.uclllabs.be";
+        masters {193.191.176.104;};
+	};
