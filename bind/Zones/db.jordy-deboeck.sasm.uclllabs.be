@@ -15,6 +15,7 @@ $TTL    300
 @       IN      NS      ns.jordy-deboeck.sasm.uclllabs.be.
         IN      NS      ns1.uclllabs.be.
         IN      NS      ns2.uclllabs.be.
+	IN	NS	ns.lucas-oudevrielink.sasm.uclllabs.be.
 
 ;A records
 @       IN      A       193.191.176.39
