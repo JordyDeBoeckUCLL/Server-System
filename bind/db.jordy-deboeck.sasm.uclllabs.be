@@ -5,14 +5,14 @@
 ;
 $TTL    300
 $ORIGIN jordy-deboeck.sasm.uclllabs.be.
-@       IN      SOA     jordy-deboeck.sasm.uclllabs.be. root.jordy-deboeck.sasm.uclllabs.be. (
-                              1         ; Serial
+@       IN      SOA     ns.jordy-deboeck.sasm.uclllabs.be. root.jordy-deboeck.sasm.uclllabs.be. (
+                              2         ; Serial
                             300         ; Refresh
                             300         ; Retry
                             300         ; Expire
                           300 ) ; Negative Cache TTL
 ;name servers
-        IN      NS      ns.jordy-deboeck.sasm.uclllabs.be.
+@       IN      NS      ns.jordy-deboeck.sasm.uclllabs.be.
         IN      NS      ns1.uclllabs.be.
         IN      NS      ns2.uclllabs.be.
 
