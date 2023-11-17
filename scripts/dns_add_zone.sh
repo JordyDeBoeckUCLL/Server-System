@@ -10,7 +10,7 @@ newSerial=$(($serial + 1))
 #we maken een zone file voor de subzone
 echo "zone $h1$subdomain.$main$h1 {
 type master;
-file $h1/etc/bind/Zones/db.$subdomain.jordy-deboeck.sasm.uclllabs.be$h1;
+file $h1/etc/bind/ScriptZones/db.$subdomain.jordy-deboeck.sasm.uclllabs.be$h1;
 };
 " >> /etc/bind/named.conf.mrt-zones
 
@@ -26,10 +26,10 @@ $origin $subdomain.jordy-deboeck.sasm.uclllabs.be.
 ;name servers
         IN      NS      ns.jordy-deboeck.sasm.uclllabs.be.
 ns      IN      A       193.191.177.221
-" > /etc/bind/Zones/db.$subdomain.jordy-deboeck.sasm.uclllabs.be
+" > /etc/bind/ScriptZones/db.$subdomain.jordy-deboeck.sasm.uclllabs.be
 
-#we voegen voor de subzone een ns record toe aan de main soa record en verhogen de serial
-echo "$subdomain        IN      NS      ns.jordy-deboeck.sasm.uclllabs.be." >> /etc/bind/Zones/db.jordy-deboeck.sasm.uclllabs.be
+#we voegen voor 	de subzone een ns record toe aan de main soa record en verhogen de serial
+echo "$subdomain        IN      NS      ns.jordy-deboeck.sb.uclllabs.be." >> /etc/bind/Zones/db.jordy-deboeck.sasm.uclllabs.be
 sed -i "s/$serial\t\t;\sSerial/$newSerial\t\t; Serial/" /etc/bind/Zones/db.jordy-deboeck.sasm.uclllabs.be
 
 #we restarten named.service
