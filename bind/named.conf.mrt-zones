@@ -1,0 +1,5 @@
+zone "foobar.jordy-deboeck.sasm.uclllabs.be" {
+type master;
+file "/etc/bind/ScriptZones/db.foobar.jordy-deboeck.sasm.uclllabs.be";
+};
+
