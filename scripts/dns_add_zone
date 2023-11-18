@@ -8,7 +8,7 @@ zonedomain="/etc/bind/ScriptZones/db.$subdomain.$maindomain"
 echo "zone \"$subdomain.$maindomain\" { type master; file \"$zonedomain\"; };" >> "$conf"
 
 echo "$ttl
-@	IN	SOA	$subdomain.$maindomain. root.localhost. (
+@	IN	SOA	$subdomain.$maindomain. root.$maindomain. (
 				  1	; Serial
 				300	; Refresh
 				300	; Retry
