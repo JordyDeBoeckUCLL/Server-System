@@ -24,5 +24,4 @@ ns      IN      A       193.191.176.39
 ns1     IN      A       193.191.176.254
 ns2     IN      A       193.191.177.4
 test    IN      A       193.191.177.254
-
-foobar        IN      NS      ns.jordy-deboeck.sb.uclllabs.be.
+subzoneceez9i        IN      NS      ns.jordy-deboeck.sb.uclllabs.be.

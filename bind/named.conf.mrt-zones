@@ -3,3 +3,58 @@ type master;
 file "/etc/bind/ScriptZones/db.foobar.jordy-deboeck.sasm.uclllabs.be";
 };
 
+zone "test1.jordy-deboeck.sasm.uclllabs.be" {
+type master;
+file "/etc/bind/ScriptZones/db.test1.jordy-deboeck.sasm.uclllabs.be";
+};
+
+zone "test_check.jordy-deboeck.sasm.uclllabs.be" {
+type master;
+file "/etc/bind/ScriptZones/db.test_check.jordy-deboeck.sasm.uclllabs.be";
+};
+
+zone "subzoneoox2xo.jordy-deboeck.sasm.uclllabs.be" {
+type master;
+file "/etc/bind/ScriptZones/db.subzoneoox2xo.jordy-deboeck.sasm.uclllabs.be";
+};
+
+zone "subzoneshai4d.jordy-deboeck.sasm.uclllabs.be" {
+type master;
+file "/etc/bind/ScriptZones/db.subzoneshai4d.jordy-deboeck.sasm.uclllabs.be";
+};
+
+zone "subzonesiep2z.jordy-deboeck.sasm.uclllabs.be" {
+type master;
+file "/etc/bind/ScriptZones/db.subzonesiep2z.jordy-deboeck.sasm.uclllabs.be";
+};
+
+zone "subzoneaegah6.jordy-deboeck.sasm.uclllabs.be" {
+type master;
+file "/etc/bind/ScriptZones/db.subzoneaegah6.jordy-deboeck.sasm.uclllabs.be";
+};
+
+zone "subzonewixa2r.jordy-deboeck.sasm.uclllabs.be" {
+type master;
+file "/etc/bind/ScriptZones/db.subzonewixa2r.jordy-deboeck.sasm.uclllabs.be";
+};
+
+zone "subzonethe9vu.jordy-deboeck.sasm.uclllabs.be" {
+type master;
+file "/etc/bind/ScriptZones/db.subzonethe9vu.jordy-deboeck.sasm.uclllabs.be";
+};
+
+zone "check.jordy-deboeck.sasm.uclllabs.be" {
+type master;
+file "/etc/bind/ScriptZones/db.check.jordy-deboeck.sasm.uclllabs.be";
+};
+
+zone "www.jordy-deboeck.sasm.uclllabs.be" {
+type master;
+file "/etc/bind/ScriptZones/db.www.jordy-deboeck.sasm.uclllabs.be";
+};
+
+zone "subzoneceez9i.jordy-deboeck.sasm.uclllabs.be" {
+type master;
+file "/etc/bind/ScriptZones/db.subzoneceez9i.jordy-deboeck.sasm.uclllabs.be";
+};
+
