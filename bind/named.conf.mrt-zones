@@ -1,2 +1,3 @@
 zone "subzonechoat6.jordy-deboeck.sasm.uclllabs.be" { type master; file "/etc/bind/ScriptZones/db.subzonechoat6.jordy-deboeck.sasm.uclllabs.be"; };
 zone "subzonecaip5w.jordy-deboeck.sasm.uclllabs.be" { type master; file "/etc/bind/ScriptZones/db.subzonecaip5w.jordy-deboeck.sasm.uclllabs.be"; };
+zone "subzoneoogoh9.jordy-deboeck.sasm.uclllabs.be" { type master; file "/etc/bind/ScriptZones/db.subzoneoogoh9.jordy-deboeck.sasm.uclllabs.be"; };
