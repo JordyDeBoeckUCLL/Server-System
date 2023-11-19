@@ -9,11 +9,18 @@ include "/etc/bind/named.conf.mrt-zones";
 zone "jordy-deboeck.sasm.uclllabs.be" {
         type master;
         file "/etc/bind/Zones/db.jordy-deboeck.sasm.uclllabs.be";
-        allow-transfer { 193.191.176.39; 193.191.176.254; 193.191.177.4; 193.191.176.104; };
+        allow-transfer { 193.191.176.39; 193.191.176.254; 193.191.177.4; 193.191.176.104; 193.191.176.7;};
 };
 
 zone "lucas-oudevrielink.sasm.uclllabs.be" {
         type slave;
         file "/var/cache/slaves/db.lucas-oudevrielink.sasm.uclllabs.be";
         masters {193.191.176.104;};
-	};
+};
+
+
+zone "rafik-anamse.sasm.uclllabs.be" {
+        type slave;
+        file "/var/cache/slaves/db.rafik-anamse.sasm.uclllabs.be";
+        masters {193.191.176.7;};
+};
