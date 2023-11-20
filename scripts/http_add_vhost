@@ -1,0 +1,36 @@
+#!/bin/bash
+#We maken de variabelen
+subzone=$(echo $1 | cut -d "." -f 1-2)
+bestaand=$(dig +short $subzone.jordy-deboeck.sasm.uclllabs.be)
+
+#We gaan kijken of er een subzone mee word gegeven en of de subzone bestaat
+if [ -n "$bestaand" ]; then
+                #als het resutaat van de dig ons ip is bestaat de subzone in ons domein en maken dus de vhost aan
+                if [ $bestaand == "193.191.176.39" ]; then
+                        echo "
+                        <VirtualHost *:80>
+                                ServerAdmin root@jordy-deboeck.sasm.uclllabs.be
+                                ServerName $1
+                                DocumentRoot /var/www/html/VhostsFromMrtScript/www.$subzone
+                                ErrorLog ${APACHE_LOG_DIR}/$subzone-error.log
+                                CustomLog ${APACHE_LOG_DIR}/$subzone-access.log combined
+                        </VirtualHost>
+                        " > /etc/apache2/sites-available/MRT.$subzone.conf;
+                        #We maken de document root structuur aan
+                        cd /var/www/html/VhostsFromMrtScript
+                        mkdir www.$subzone
+                        cd www.$subzone
+
+                        #We maken de index.html file aan
+                        echo welcome $subzone >> index.html;
+                        cd
+
+                        #We gaan de site enablen en apache heropstarten
+                        a2ensite MRT.$subzone.conf;
+                        systemctl reload apache2;
+                else
+                        echo Gelieve een geldige subzone mee te geven;
+                fi
+else
+        echo Gelieve een geldige subzone mee te geven;
+fi
