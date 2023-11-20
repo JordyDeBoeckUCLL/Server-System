@@ -6,7 +6,7 @@
 $ORIGIN jordy-deboeck.sasm.uclllabs.be.
 $TTL    300
 @       IN      SOA     ns.jordy-deboeck.sasm.uclllabs.be. root.jordy-deboeck.sasm.uclllabs.be. (
-                     2023111901         ; Serial
+                     2023111928         ; Serial
                             300         ; Refresh
                             300         ; Retry
                             300         ; Expire
@@ -30,3 +30,30 @@ subzonechoat6.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.ucllla
 subzonecaip5w.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
 subzoneoogoh9.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
 subzoneun8vav.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzoneahsh9g.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzoneeewai4.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzoneaeh9oo.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzonejai8ku.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzonecoosh9.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzoneieph0v.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzoneru7eiw.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzonecoo2bu.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzonelee7ei.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzoneya5gie.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzoneyae8la.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzonemeiro0.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzoneceeng9.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzonehoh4ku.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzoneshuor5.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzoneij6woh.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzoneoo6eeg.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzonefoo0ye.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzoneohl5ot.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzoneoosah4.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzoneoopha6.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzonechoh5k.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzoneyeik7i.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzonebaoj3z.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzoneai4eec.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzonehueh4o.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
+subzonefohoo2.jordy-deboeck.sasm.uclllabs.be. IN NS ns.jordy-deboeck.sasm.uclllabs.be.
