@@ -19,3 +19,31 @@ recipient_delimiter = +
 
 compatibility_level = 2
 
+# Set your hostname
+myhostname = mx.jordy-deboeck.sasm.uclllabs.be
+
+# Allow network connections from localhost and RFC1918 ranges only
+inet_interfaces = localhost, 192.168.0.0/16, 172.16.0.0/12, 10.0.0.0/8
+
+# Disable open relay
+smtpd_relay_restrictions = permit_mynetworks, reject_unauth_destination
+
+# Enable SASL authentication for secure connections
+smtpd_sasl_type = dovecot
+smtpd_sasl_path = private/auth
+smtpd_sasl_auth_enable = yes
+smtpd_sasl_security_options = noanonymous
+
+# Allow only authenticated users to send emails
+smtpd_recipient_restrictions = permit_sasl_authenticated, permit_mynetworks, reject_unauth_destination
+
+# Virtual mailbox settings
+virtual_mailbox_domains = jordy-deboeck.sasm.uclllabs.be
+virtual_mailbox_base = /var/vmail
+virtual_mailbox_maps = hash:/etc/postfix/vmailbox
+virtual_minimum_uid = 1000
+virtual_uid_maps = static:1000
+virtual_gid_maps = static:1000
+
+# Use Dovecot for local delivery
+virtual_transport = lmtp:unix:private/dovecot-lmtp
