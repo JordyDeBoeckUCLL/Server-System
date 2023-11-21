@@ -1,0 +1,18 @@
+#!/bin/bash
+
+directory="/etc/bind/ScriptZones"
+zone_file="/etc/bind/Zones/db.jordy-deboeck.sasm.uclllabs.be"
+
+# Check if the directory exists
+if [ -d "$directory" ]; then
+    # Remove all files in the directory
+    rm -f "$directory"/*
+
+    # Check if the zone file exists
+    if [ -f "$zone_file" ]; then
+        # Remove lines containing subzones from the zone file
+        sed -i '/subzone/d' "$zone_file"
+
+    fi
+fi
+
