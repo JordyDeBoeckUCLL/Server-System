@@ -1,0 +1,24 @@
+while true; do
+    current_rows=$(mysql -u root -s -N -e 'SELECT COUNT(*) FROM check.log;')
+    # Check if the number of rows is less than 80
+    if [ $current_rows -lt 80 ]; then
+        # Calculate the number of rows to add to reach 90
+        rows_to_add=$((90 - current_rows))
+
+        # Add rows to reach 90
+        for i in $(seq 1 $rows_to_add); do
+            random_string=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 8 | head -n 1)
+            mysql -u root check -e "INSERT INTO log (date, text) VALUES (NOW(), '$random_string');"
+        done
+
+    elif [ $current_rows -gt 90 ]; then
+        # Calculate the number of rows to delete to reduce to 90
+        rows_to_delete=$((current_rows - 90))
+
+        # Delete rows to reduce to 90
+        mysql -u root check -e "DELETE FROM log ORDER BY date ASC LIMIT $rows_to_delete;"
+
+    else
+        break  # Exit the loop if the condition is no longer true
+    fi
+done
