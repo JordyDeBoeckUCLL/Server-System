@@ -61,3 +61,4 @@ mysql:x:120:
 bind:x:121:
 dovecot:x:122:
 dovenull:x:123:
+vmail:x:5000:postfix,dovecot
