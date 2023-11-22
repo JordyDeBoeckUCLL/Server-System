@@ -6,7 +6,7 @@
 $ORIGIN jordy-deboeck.sasm.uclllabs.be.
 $TTL    300
 @       IN      SOA     ns.jordy-deboeck.sasm.uclllabs.be. root.jordy-deboeck.sasm.uclllabs.be. (
-                     2023111948         ; Serial
+                     2023111970         ; Serial
                             300         ; Refresh
                             300         ; Retry
                             300         ; Expire
