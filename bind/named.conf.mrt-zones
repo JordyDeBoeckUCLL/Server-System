@@ -70,3 +70,5 @@ zone "subzoneiem1ae.jordy-deboeck.sasm.uclllabs.be" { type master; file "/etc/bi
 zone "subzoneaifie8.jordy-deboeck.sasm.uclllabs.be" { type master; file "/etc/bind/ScriptZones/db.subzoneaifie8.jordy-deboeck.sasm.uclllabs.be"; };
 zone "subzoneiebee2.jordy-deboeck.sasm.uclllabs.be" { type master; file "/etc/bind/ScriptZones/db.subzoneiebee2.jordy-deboeck.sasm.uclllabs.be"; };
 zone "subzonevu8pho.jordy-deboeck.sasm.uclllabs.be" { type master; file "/etc/bind/ScriptZones/db.subzonevu8pho.jordy-deboeck.sasm.uclllabs.be"; };
+zone "subzonecu4rah.jordy-deboeck.sasm.uclllabs.be" { type master; file "/etc/bind/ScriptZones/db.subzonecu4rah.jordy-deboeck.sasm.uclllabs.be"; };
+zone "subzonetal8le.jordy-deboeck.sasm.uclllabs.be" { type master; file "/etc/bind/ScriptZones/db.subzonetal8le.jordy-deboeck.sasm.uclllabs.be"; };
