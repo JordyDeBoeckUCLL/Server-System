@@ -1,36 +1,44 @@
 #!/bin/bash
-#We maken de variabelen
-subzone=$(echo $1 | cut -d "." -f 1-2)
-bestaand=$(dig +short $subzone.jordy-deboeck.sasm.uclllabs.be)
 
-#We gaan kijken of er een subzone mee word gegeven en of de subzone bestaat
-if [ -n "$bestaand" ]; then
-                #als het resutaat van de dig ons ip is bestaat de subzone in ons domein en maken dus de vhost aan
-                if [ $bestaand == "193.191.176.39" ]; then
-                        echo "
-                        <VirtualHost *:80>
-                                ServerAdmin root@jordy-deboeck.sasm.uclllabs.be
-                                ServerName $1
-                                DocumentRoot /var/www/html/VhostsFromMrtScript/www.$subzone
-                                ErrorLog ${APACHE_LOG_DIR}/$subzone-error.log
-                                CustomLog ${APACHE_LOG_DIR}/$subzone-access.log combined
-                        </VirtualHost>
-                        " > /etc/apache2/sites-available/MRT.$subzone.conf;
-                        #We maken de document root structuur aan
-                        cd /var/www/html/VhostsFromMrtScript
-                        mkdir www.$subzone
-                        cd www.$subzone
-
-                        #We maken de index.html file aan
-                        echo welcome $subzone >> index.html;
-                        cd
-
-                        #We gaan de site enablen en apache heropstarten
-                        a2ensite MRT.$subzone.conf;
-                        systemctl reload apache2;
-                else
-                        echo Gelieve een geldige subzone mee te geven;
-                fi
-else
-        echo Gelieve een geldige subzone mee te geven;
+if [ "$EUID" -ne 0 ]; then
+  echo "EE not executed as root"
+  exit
 fi
+
+if [ -z "$1" ]; then
+  echo "EE no zone provided"
+  exit 1
+fi
+
+zone="$1"
+zone_ip=$(dig +short +nocmd +nocomments +noquestion +noauthority +noadditional $zone @8.8.8.8)
+
+if ! [ -n "$zone_ip" ]; then
+  echo "EE $zone does not exist"
+  exit 1
+fi
+
+site_conf_root="/etc/apache2/sites-available/"
+site="999-${zone}"
+site_conf="$site_conf_root/$site.conf"
+
+document_root="/var/www/html/$zone"
+
+if ! [ -d "$document_root" ]; then
+  mkdir "$document_root"
+fi
+
+cat > "$site_conf" <<EOL
+<VirtualHost *:80>
+  ServerAdmin root@jordy-deboeck.sasm.uclllabs.be
+  ServerName $zone
+  DocumentRoot $document_root
+  ErrorLog \${APACHE_LOG_DIR}/$zone.error.log
+  CustomLog \${APACHE_LOG_DIR}/$zone.access.log combined
+</VirtualHost>
+EOL
+
+echo "welcome $zone" > "$document_root/index.html"
+
+a2ensite $site
+systemctl reload apache2.service
