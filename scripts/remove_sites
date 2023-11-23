@@ -1,0 +1,10 @@
+#!/bin/bash
+
+directory="/etc/apache2/sites-available"
+
+# Check if the directory exists
+if [ -d "$directory" ]; then
+    # Remove files starting with "999-"
+    rm -f "$directory"/999-*
+
+fi
