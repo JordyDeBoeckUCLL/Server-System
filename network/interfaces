@@ -1,1 +1,4 @@
 pre-up arp -s 193.191.176.254 ca:fe:c0:ff:ee:00
+iface eth0 inet6 static
+    address 2001:6a8:2880:a020::1b/64
+    gateway 2001:6a8:2880:a020::fe
