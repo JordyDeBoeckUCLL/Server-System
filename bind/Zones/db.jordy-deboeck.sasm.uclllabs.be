@@ -6,7 +6,7 @@
 $ORIGIN jordy-deboeck.sasm.uclllabs.be.
 $TTL    300
 @       IN      SOA     ns.jordy-deboeck.sasm.uclllabs.be. root.jordy-deboeck.sasm.uclllabs.be. (
-                     2023111985         ; Serial
+                     2023112153         ; Serial
                             300         ; Refresh
                             300         ; Retry
                             300         ; Expire
@@ -34,5 +34,6 @@ ns2     IN      A       193.191.177.4
 test    IN      A       193.191.177.254
 secure	IN	A	193.191.176.39
 supersecure	IN	A	193.191.176.39
-_acme-challenge.supersecure.jordy-deboeck.sasm.uclllabs.be.	IN	TXT	u6KCO88dntoCXWM_Bm_LE19DsPGQ3xRfrWQmNisEp5U
-_acme-challenge.secure.jordy-deboeck.sasm.uclllabs.be.		IN	TXT	AuZEGniELcdRjN1OJrQqd2Sb5WVHTrrTOewDCWHmA1g
+
+_acme-challenge.supersecure.jordy-deboeck.sasm.uclllabs.be.	IN	TXT	QtmdLBNRXePQ4Y8FlaUvY9vpWUbEOP4poRYmFxdF4og
+_acme-challenge.secure.jordy-deboeck.sasm.uclllabs.be.		IN	TXT	E7xH65yfOWbjE6oN24pHcJ6oFseLnr3ehzei1Tg9iB0
