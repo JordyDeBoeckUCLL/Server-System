@@ -1,0 +1,3 @@
+#!/bin/bash
+
+certbot renew --cert-name jordy-deboeck.sasm.uclllabs.be
